@@ -6,9 +6,10 @@ class guesser {
 
     public int GuessNUMBER() {
 
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Guesser kindly enter the number : ");
-        guessNUM = sc.nextInt();
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("Guesser kindly enter the number : ");
+            guessNUM = sc.nextInt();
+        }
         return guessNUM;
     }
 }
@@ -18,9 +19,10 @@ class player {
 
     public int GuessNUMBER() {
 
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Player please guess your number and input it in console : ");
-        PlayerGuess = sc.nextInt();
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("Player please guess your number and input it in console : ");
+            PlayerGuess = sc.nextInt();
+        }
         return PlayerGuess;
     }
 }
@@ -82,4 +84,4 @@ public class Guesser_game {
 		u.collect_from_players();
 		u.compare();
     }
-}
+} 
